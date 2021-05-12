@@ -1,0 +1,74 @@
+.u-icons-box {
+  position: absolute;
+  bottom: 0;
+  right: .4rem;
+  height: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity .3s;
+  will-change: opacity;
+  .u-tip {
+    flex: 1;
+    display: flex;
+    position: relative;
+    height: 33.33%;
+    &:hover {
+      .u-tip-content {
+        width: 6rem;
+      }
+    }
+    .u-tip-content {
+      position: absolute;
+      width: 0;
+      height: 100%;
+      flex: 1 1 10rem;
+      display: flex;
+      align-items: center;
+      transform: translateX(-100%);
+      z-index: -1;
+      overflow-x: auto;
+      justify-content: flex-start;
+      transition: width .5s;
+      .iconfont {
+        &:hover {
+          transform: translateY(-6px);
+        }
+        &.actived {
+          color: @primary-color;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .iconfont {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    overflow-y: hidden;
+    align-items: center;
+    transition: transform .3s;
+    opacity: 1;
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.u-image {
+  &:hover {
+    .u-icons-box {
+      opacity: 1;
+    }
+  }
+}
+
+.u-icons-popver {
+  img {
+    max-width: 50rem;
+    max-height: 40rem;
+  }
+}
